@@ -2,6 +2,7 @@ package com.example.security.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -21,6 +22,7 @@ public class MainController {
      */
     @PostMapping("/test")
     @ResponseBody
+    @CrossOrigin("http://localhost:8080") // localhost 출처(Origin)에 대한 교차 출처(Cross-Origin) 요청을 허용;
     public String test() {
         log.info("Test method called");
         return "Hello";
