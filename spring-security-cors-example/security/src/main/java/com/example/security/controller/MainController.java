@@ -22,7 +22,7 @@ public class MainController {
      */
     @PostMapping("/test")
     @ResponseBody
-    @CrossOrigin("http://localhost:8080") // localhost 출처(Origin)에 대한 교차 출처(Cross-Origin) 요청을 허용;
+    // @CrossOrigin("http://localhost:8080") // localhost 출처(Origin)에 대한 교차 출처(Cross-Origin) 요청을 허용;
     public String test() {
         log.info("Test method called");
         return "Hello";
